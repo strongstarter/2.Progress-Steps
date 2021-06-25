@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.progressBar {
+    display: flex;
+}
+
+.step1,
+.step2,
+.step3,
+.step4 {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding:3px 8px;
+    margin: 30px;
+}
+
+.prev,
+.next {
+    padding: 5px 25px;
+    background-color: rgb(53, 135, 228);
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+.prev {
+    margin-right: 10px;
+}
