@@ -19,10 +19,7 @@ body {
     display: flex;
 }
 
-.step1,
-.step2,
-.step3,
-.step4 {
+.step {
     border: 3px solid lightgray;
     border-radius: 50%;
     padding:3px 8px;
@@ -30,22 +27,15 @@ body {
     
 }
 
-.step1.active {
+.step.active {
     border: 3px solid rgb(53, 135, 228);
 }
 
-.step2.active {
-    border: 3px solid rgb(53, 135, 228);
-}
-
-.connector1.active {
+.connector.active {
     background-color: rgb(53, 135, 228);
 }
 
-
-.connector1,
-.connector2,
-.connector3 {
+.connector {
    margin-top: 14px;
     width: 70px;
     height: 3px;
