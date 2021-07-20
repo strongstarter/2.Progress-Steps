@@ -18,29 +18,6 @@
 
 //4. 전달할 대상을 특정한다. 
 //toEmployee에 매개편수 사용해서 특정한 누군가에게만 보내도록 수정해봐라.
-const jiyeon = {
-    name: 'jiyeon',
-    title: 'manager',
-    unit: 'quality',
-    contact: '123',
-    duty: 'play'
-}
-
-const sangHyun = {
-    name: 'sanghyun',
-    title: 'director',
-    unit: 'quality',
-    contact: '512',
-    duty:'programing'
-}
-
-const Gina = {
-    name: 'gina',
-    title: 'associate manager',
-    unit: 'quality',
-    contact: '319',
-    duty: 'play with jiyeon'
-}
 
 class Worker {
     constructor(name, title, unit, contact, duty) {
@@ -62,4 +39,12 @@ class Worker {
     toEmployee(){};
 }
 
-print(jiyeon); //jiyeon is not defined라고 나옴. ㅡ,.ㅡ;
+const jiyeon = new Worker(
+    "jiyeon", "manager", "quality", "123", "playing"
+)
+
+const sanghyun = new Worker(
+    "sanghyun", "director", "quality", "555", "programing"
+)
+console.log(jiyeon);
+console.log(sanghyun);
