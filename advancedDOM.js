@@ -264,6 +264,7 @@ const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 
 let curSlide = 0;
+const maxSlide = slides.length;
 
 
 const slider = document.querySelector('.slider')
