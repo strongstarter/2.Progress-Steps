@@ -232,7 +232,7 @@ h1.addEventListener('click', alertH1 );
 
 //setTimeout(() => 
 //h1.removeEventListener('mouseenter', alertH1), 3000);
-
+                   
 // Reveal section
 
 const allSections2 = document.querySelectorAll('.section');
@@ -255,8 +255,57 @@ const sectionObserver = new IntersectionObserver
 });
 allSections2.forEach(function(section) { //section들을 하나씩 돈면서
   sectionObserver.observe(section);
-  section.classList.add('section--hidden');
+  //section.classList.add('section--hidden');
 });
 
+//Slider
+const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
+
+let curSlide = 0;
 
 
+const slider = document.querySelector('.slider')
+slider.style.transform = 'scale(0.4) translate(-800)';
+slider.style.overflow = 'visible'
+
+
+slides.forEach((slide, index) => slide.style.transform = 
+`translateX(${100 * index}%)`)
+// 1 slide at 0%, 2 at 100%, 200%, 300%
+
+const goToSlide = function(slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
+
+goToSlide(0);
+
+//going to the next slide
+const nextSlide = function() {
+  if(curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+      curSlide++;
+  }
+  goToSlide(curSlide)
+}
+
+  
+
+//-100%, 0 , 100%, 200%
+
+const prevSlide = function() {
+  if(curSlide === 0) {
+    curSlide = maxSlide - 1
+  }else {
+    curSlide--;
+  }
+  
+  goToSlide(curSlide)
+}
+
+btnRight.addEventListener('click', nextSlide);
+btnLeft.addEventListener('click', prevSlide);
